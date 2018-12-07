@@ -4,5 +4,6 @@
 ![Alt Text](https://media.giphy.com/media/kgTdIa2kji52YLwWJo/giphy.gif)
 ### You can change the size of the grid. The amount of mines changes with the size of the grid
 ![Alt Text](https://media.giphy.com/media/TIP6sem2U6a3HlHeBg/giphy.gif)
-### This is what it looks like when you lose.
-![Alt Text](https://media.giphy.com/media/kVFHLw8llkF4fF9184/giphy.gif)
+### The game is played just like normal minesweeper. You click a square and the empty squares around it are revealed.
+### If a square has a number in it, that is the number of mines (or vipers in this case) in the direct vicinity.
+### If you (left) click on a viper, you lose. If you flag all of the vipers (right click), you win!
