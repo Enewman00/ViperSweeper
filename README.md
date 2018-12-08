@@ -8,5 +8,5 @@
 #### If a square has a number in it, that is the number of mines (or vipers in this case) in the direct vicinity.
 #### If you (left) click on a viper, you lose. If you flag all of the vipers (right click), you win!
 
-##How to run the program
+## How to run the program
 There's an executable jar file called "ViperSweeper.jar". Just run that to play the game.
