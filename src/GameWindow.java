@@ -251,7 +251,7 @@ public class GameWindow extends javax.swing.JFrame {
                 // Add the tile to the panel with the constraints
                 game_jPanel.add(square, constraints);
                 
-                square.setIcon(new ImageIcon("blank2.gif", "blank2"));
+                square.setIcon(new ImageIcon("pictures/blank2.gif", "blank2"));
                 
                 // Add a MouseListener anonymously, and overided onClick method
                 square.addMouseListener(new MouseListener() {
@@ -264,16 +264,16 @@ public class GameWindow extends javax.swing.JFrame {
                     @Override
                     public void mousePressed(MouseEvent e) {
                         pressed = true;
-                        face_button.setIcon(new ImageIcon("uhoh.png", "suprisedish face"));
+                        face_button.setIcon(new ImageIcon("pictures/uhoh.png", "suprisedish face"));
                         if (!square.isRevealed() && !square.isFlag()) {
-                            square.setIcon(new ImageIcon("blank3.gif", "pressed blank"));
+                            square.setIcon(new ImageIcon("pictures/blank3.gif", "pressed blank"));
                         }
                     }
                     @Override
                     public void mouseReleased(MouseEvent e) {
                         pressed = false;
                         
-                        face_button.setIcon(new ImageIcon("happy.png", "happy"));
+                        face_button.setIcon(new ImageIcon("pictures/happy.png", "happy"));
                     }
 
                     @Override
@@ -285,7 +285,7 @@ public class GameWindow extends javax.swing.JFrame {
                             return;
                         }
                         if (pressed = true && !square.isRevealed()) {
-                            square.setIcon(new ImageIcon("blank2.gif", "unpressed blank"));
+                            square.setIcon(new ImageIcon("pictures/blank2.gif", "unpressed blank"));
                         }
                     }
                         
@@ -391,7 +391,7 @@ public class GameWindow extends javax.swing.JFrame {
             
         }
         flags_label.setText("" + remaining);
-        face_button.setIcon(new ImageIcon("happy.png", "suprisedish face"));
+        face_button.setIcon(new ImageIcon("pictures/happy.png", "suprisedish face"));
         // Generate a random set of bombs. 
         // Bombs will be 5% of the total number of tiles.
         // Calculate all of the numbers for adjacent tile numbers for the tiles.
@@ -414,12 +414,12 @@ public class GameWindow extends javax.swing.JFrame {
             
             //square.setRevealed(true);
             if (!square.isFlag()) {
-                square.setIcon(new ImageIcon("flag.gif", "flag"));
+                square.setIcon(new ImageIcon("pictures/flag.gif", "flag"));
                 square.setFlag(true);
                 remaining--;
             }
             else {
-                square.setIcon(new ImageIcon("blank2.gif", "blank2"));
+                square.setIcon(new ImageIcon("pictures/blank2.gif", "blank2"));
                 square.setFlag(false);
                 remaining++;
                 //square.setRevealed(false);
@@ -474,48 +474,48 @@ public class GameWindow extends javax.swing.JFrame {
 
 
             if (grid[r][c].getNumBombs() == 1) {
-                grid[r][c].setIcon(new ImageIcon("one.gif", "one"));
+                grid[r][c].setIcon(new ImageIcon("pictures/one.gif", "one"));
                 grid[r][c].setRevealed(true);
             }
 
             else if (grid[r][c].getNumBombs() == 2) {
-                grid[r][c].setIcon(new ImageIcon("two.gif", "two"));
+                grid[r][c].setIcon(new ImageIcon("pictures/two.gif", "two"));
                 grid[r][c].setRevealed(true);
             }
 
             else if (grid[r][c].getNumBombs() == 3) {
-                grid[r][c].setIcon(new ImageIcon("three.gif", "three"));
+                grid[r][c].setIcon(new ImageIcon("pictures/three.gif", "three"));
                 grid[r][c].setRevealed(true);
             }
 
             else if (grid[r][c].getNumBombs() == 4) {
-                grid[r][c].setIcon(new ImageIcon("four.gif", "four"));
+                grid[r][c].setIcon(new ImageIcon("pictures/four.gif", "four"));
                 grid[r][c].setRevealed(true);
             }
 
             else if (grid[r][c].getNumBombs() == 5) {
-                grid[r][c].setIcon(new ImageIcon("five.gif", "five"));
+                grid[r][c].setIcon(new ImageIcon("pictures/five.gif", "five"));
                 grid[r][c].setRevealed(true);
             }
 
             else if (grid[r][c].getNumBombs() == 6) {
-                grid[r][c].setIcon(new ImageIcon("six.gif", "six"));
+                grid[r][c].setIcon(new ImageIcon("pictures/six.gif", "six"));
                 grid[r][c].setRevealed(true);
             }
 
             else if (grid[r][c].getNumBombs() == 7) {
-                grid[r][c].setIcon(new ImageIcon("seven.gif", "seven"));
+                grid[r][c].setIcon(new ImageIcon("pictures/seven.gif", "seven"));
                 grid[r][c].setRevealed(true);
             }
 
             else if (grid[r][c].getNumBombs() == 8) {
-                grid[r][c].setIcon(new ImageIcon("eight.gif", "eight"));
+                grid[r][c].setIcon(new ImageIcon("pictures/eight.gif", "eight"));
                 grid[r][c].setRevealed(true);
             }
             else if (grid[r][c].getNumBombs() == 9) {
                 //game_jPanel.setVisible(false);
-                grid[r][c].setIcon(new ImageIcon("snake.gif", "snake"));
-                face_button.setIcon(new ImageIcon("dead.png", "dead face"));
+                grid[r][c].setIcon(new ImageIcon("pictures/snake.gif", "snake"));
+                face_button.setIcon(new ImageIcon("pictures/dead.png", "dead face"));
                 int answer = JOptionPane.showConfirmDialog(this, "You Lost :(\nWould you like to start a new game?"); //== JOptionPane.NO_OPTION)
                 if (answer == JOptionPane.YES_OPTION){
                     resetGame();
@@ -529,7 +529,7 @@ public class GameWindow extends javax.swing.JFrame {
             if (grid[r][c].getNumBombs() != 0) return;
 
             grid[r][c].setRevealed(true);
-            grid[r][c].setIcon(new ImageIcon("empty.gif", "empty"));
+            grid[r][c].setIcon(new ImageIcon("pictures/empty.gif", "empty"));
 
             //recursively reveals all corners...
     
@@ -579,7 +579,7 @@ public class GameWindow extends javax.swing.JFrame {
             }
         }
         if (count == numBombs && remaining == 0) {
-            face_button.setIcon(new ImageIcon("sunglasses.png", "winning face"));
+            face_button.setIcon(new ImageIcon("pictures/sunglasses.png", "winning face"));
             int answer = JOptionPane.showConfirmDialog(this, "You Won! :)\nWould you like to start a new game?"); //== JOptionPane.NO_OPTION)
                 if (answer == JOptionPane.YES_OPTION){
                     resetGame();
